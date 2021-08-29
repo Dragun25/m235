@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <referenceContainer name="content">
+        <block class="Arpo\HeaderLinks\Block\Delivery" name="delivery-link-header" template="Arpo_HeaderLinks::delivery.phtml" />
+<!--        <block class="Arpo\HeaderLinks\Block\Contacts" name="contacts-link-header" template="Arpo_HeaderLinks::contacts.phtml" />-->
+    </referenceContainer>
+</page>

@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="//www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="header.panel">
+            <block class="Arpo\HeaderLinks\Block\HeaderLink" name="about-us">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">About_US</argument>
+                    <argument name="path" xsi:type="string">delivery/aboutus</argument>
+                </arguments>
+            </block>
+            <block class="Arpo\HeaderLinks\Block\HeaderLink" name="action">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Promotions</argument>
+                    <argument name="path" xsi:type="string">delivery/promotions</argument>
+                </arguments>
+            </block>
+            <block class="Arpo\HeaderLinks\Block\HeaderLink" name="custom-certs">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Certificates</argument>
+                    <argument name="path" xsi:type="string">delivery/certificates</argument>
+                </arguments>
+            </block>
+            <block class="Arpo\HeaderLinks\Block\HeaderLink" name="delivery">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Delivery</argument>
+                    <argument name="path" xsi:type="string">delivery</argument>
+                </arguments>
+            </block>
+            <block class="Arpo\HeaderLinks\Block\HeaderLink" name="custom-page-con">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Contacts</argument>
+                    <argument name="path" xsi:type="string">delivery/page</argument>
+                </arguments>
+            </block>
+            <block class="Arpo\HeaderLinks\Block\HeaderLink" name="facebook-top-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="false">Facebook</argument>
+                    <argument name="path" xsi:type="string"><![CDATA[http://www.google.com]]></argument>
+                </arguments>
+            </block>
+            <block class="Arpo\HeaderLinks\Block\HeaderLink" name="instagram-top-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="false">Instagram</argument>
+                    <argument name="path" xsi:type="string"><![CDATA[http://www.google.com]]></argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+    </body>
+</page>

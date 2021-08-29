@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="don_custom_text_quote" resource="default" engine="innodb" comment="Quote Extension Attributes">
+        <column xsi:type="int" name="entity_id" padding="10" unsigned="true" nullable="false" identity="false" comment="Quote Item ID"/>
+        <column xsi:type="varchar" name="custom_text" length="255" nullable="true" comment="Custom text"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id"/>
+        </constraint>
+        <constraint xsi:type="foreign" referenceId="DON_CUSTOM_TEXT_QUOTE_QUOTE_ENTITY_ID_QUOTE_ENTITY_ID"
+                    table="don_custom_text_quote" column="entity_id"
+                    referenceTable="quote" referenceColumn="entity_id"
+                    onDelete="CASCADE"/>
+    </table>
+
+    <table name="don_custom_text_order" resource="default" engine="innodb" comment="Sales Order Extension Attributes">
+        <column xsi:type="int" name="entity_id" padding="10" unsigned="true" nullable="false" identity="false" comment="Order Item ID"/>
+        <column xsi:type="varchar" name="custom_text" length="255" nullable="true" comment="Custom text"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id"/>
+        </constraint>
+        <constraint xsi:type="foreign" referenceId="DON_CUSTOM_TEXT_ORDER_ENTITY_ID_QUOTE_ENTITY_ID"
+                    table="don_custom_text_order" column="entity_id"
+                    referenceTable="sales_order" referenceColumn="entity_id"
+                    onDelete="CASCADE"/>
+    </table>
+</schema>

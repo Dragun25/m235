@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Sales\Api\OrderRepositoryInterface">
+        <plugin name="donin_orderattrs_load_order_data" type="Donin\OrderAttrs\Plugin\Order\LoadOrderDataPlugin" />
+        <plugin name="save_get_custom_attribute" type="Donin\OrderAttrs\Plugin\OrderSaveGet"/>
+    </type>
+    <preference for="Donin\OrderAttrs\Api\Data\QuoteAttributeInterface"
+                type="Donin\OrderAttrs\Model\QuoteAttribute"/>
+
+    <preference for="Donin\OrderAttrs\Api\Data\OrderAttributeInterface"
+                type="Donin\OrderAttrs\Model\OrderAttribute"/>
+
+    <preference for="Donin\OrderAttrs\Api\QuoteRepositoryInterface"
+                type="Donin\OrderAttrs\Model\QuoteAttributeRepository"/>
+
+    <preference for="Donin\OrderAttrs\Api\OrderRepositoryInterface"
+                type="Donin\OrderAttrs\Model\OrderAttributeRepository"/>
+
+    <type name="Magento\Checkout\Model\ShippingInformationManagement">
+        <plugin name="save_donin_attrs_in_quote" type="Donin\OrderAttrs\Plugin\Checkout\Model\ShippingInformationManagement" sortOrder="1"/>
+    </type>
+
+    <type name="Magento\Quote\Model\QuoteRepository\SaveHandler">
+        <plugin name="asdsadasdsa" type="Donin\OrderAttrs\Plugin\QuoteExtensionAttributesSave"/>
+    </type>
+
+    <type name="Magento\Quote\Model\QuoteRepository\LoadHandler">
+        <plugin name="donin_attrs_quote_extension_attributes_load" type="Donin\OrderAttrs\Plugin\QuoteExtensionAttributesLoad"/>
+    </type>
+</config>
